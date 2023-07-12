@@ -145,9 +145,6 @@ nav .linkContainer .navLinks:hover {
         z-index: -1;
         transition: .6s;
     }
-    nav .linkContainer .navLinks {
-        /*padding may be required here*/
-    }
 
     nav .hamburgerMenu {
         display: grid !important;
@@ -253,36 +250,46 @@ header {
     z-index: -1;
 }
 
-/*Greeting and Skills*/
-
-.sectionContainer {
+.contentContainer {
     background-color: white;
     height: 2000px;
     width: 100%;
 }
 
+/*Greeting and Skills*/
+
+.greetAndSkillsSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .greetAndSkills {
     display: flex;
-    padding: 10% 22%;
+    justify-content: center;
+    width: 100%;
+    padding: 10% 12%;
     color: #4A4A4A;
     /* outline: thin dotted red; */
 }
 
 .greetingSection {
-    width: 50%;
+    width: 400px;
     /* outline: thin dotted red; */
 }
 
 h1 {
+    font-size: 48px;
     font-weight: 1000;
 }
 
 h2 {
-    font-size: 25px;
+    font-size: 30px;
+    font-weight: 600;
 }
 
 p {
-    font-size:17px;
+    font-size:20.4px;
 }
 
 .greetingLinkContainer {
@@ -323,41 +330,41 @@ p {
     display: flex;
     justify-content: center;  /*aligns horizontally*/
     align-items: center;  /*aligns vertically*/
-    background-color: #878787;
+    background-color: #4A4A4A;
     height: 100%;
     width: 1px;
 }
 
 .topLanguagesSection {
-    width: 50%;
     /* outline: thin dotted red; */
 }
 
 .skillsGrid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    height: 170px;
-    width: 300px;
-    padding: 20px 0 0 0;
+    height: 190px;
+    width: 400px;
+    padding: 10px 0 0 0;
 }
 
 .skill {
     display: flex;
     justify-content: center;
     align-items: center; /* These two lines center the image within the grid item */
-    height: 60px;
-    width: 60px;
+    height: 70px;
+    width: 70px;
 }
 
 .skill img {
-    height: 60px;
-    width: 60px;
+    height: 100%;
+    width: 100%;
 }
 
 /*About Me Section*/
 
 .aboutMeContainer {
-    padding: 5% 12%;
+    padding: 5% 16%;
+    width: 100%;
     color: white;
     background-color: #236E4B;
     position: relative;
@@ -396,20 +403,19 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 0 80px 0;
 }
 
 .projects {
     /* height: 20px;
     width: 60%; */
-    padding: 50% 32%;
-    outline: thin dotted red;
+    /* padding: 50% 32%; */
+    /* outline: thin dotted red; */
 }
 
 .projectContainer {
-    padding: 5% 52%;
+    /* padding: 5% 52%; */
     /* outline: thin dotted red; */
-    display:flex;
+    /* display:flex; */
 }
 
 /* Footer Styling */
