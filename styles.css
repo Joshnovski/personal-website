@@ -1,440 +1,433 @@
 * {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    list-style: none;
-    text-decoration:none;
-    font-family: "Outfit";
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Outfit";
 }
 
 /*Top bar container*/
 
 nav {
-    display:flex;
-    justify-content:space-between; /*or space-between*/
-    align-items: center;
-    padding: 0 15%;
-    height: 60px;
-    line-height: 60px;
-    background: white;
+  display: flex;
+  justify-content: space-between; /*or space-between*/
+  align-items: center;
+  padding: 0 15%;
+  height: 60px;
+  line-height: 60px;
+  background: white;
 }
 
 nav .nameContainer {
-    display: flex;
-    justify-content: center;  /*aligns horizontally*/
-    align-items: center;  /*aligns vertically*/
-    padding: 2px;
-    /* border: thin dotted red; */
+  display: flex;
+  justify-content: center; /*aligns horizontally*/
+  align-items: center; /*aligns vertically*/
+  padding: 2px;
+  /* border: thin dotted red; */
 }
 
 /*Light Dark Mode Button*/
 nav .nameContainer .LightDarkModeBoxContainer {
-    height: 20px;
-    width: 20px;
-    cursor: pointer;
-    margin-right: 10px;
-    /* border: thin dotted red; */
-    position: relative;
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  margin-right: 10px;
+  /* border: thin dotted red; */
+  position: relative;
 }
 
 nav .nameContainer .LightDarkModeBoxContainer:hover .boxTL {
-    top: 25%;
-    left: 0;
-    background-color: #F4B77E;
+  top: 25%;
+  left: 0;
+  background-color: #f4b77e;
 }
 
 nav .nameContainer .LightDarkModeBoxContainer:hover .boxBR {
-    background-color: #084451;
+  background-color: #084451;
 }
 
 nav .nameContainer .LightDarkModeBoxContainer:hover .boxTR {
-    background-color: #526197;
+  background-color: #526197;
 }
 
 nav .nameContainer .LightDarkModeBoxContainer .boxTL {
-    background-color: #7EC3F4;
-    width: 50%;
-    height: 50%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: top 0.5s, background-color 1s;
+  background-color: #7ec3f4;
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: top 0.5s, background-color 1s;
 }
 
 nav .nameContainer .LightDarkModeBoxContainer .boxBR {
-    background-color: #003C30;
-    width: 50%;
-    height: 50%;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    transition: background-color 1s;
+  background-color: #003c30;
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transition: background-color 1s;
 }
 
 nav .nameContainer .LightDarkModeBoxContainer .boxTR {
-    background-color: #247952;
-    width: 50%;
-    height: 50%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transition: background-color 1s;
+  background-color: #247952;
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: background-color 1s;
 }
 
 /*My name in top bar*/
 nav .nameContainer .name {
-    color: #4A4A4A;
-    font-size: 25px;
-    font-weight: 500;
-    letter-spacing: 2px;
-    text-decoration:none;
+  color: #4a4a4a;
+  font-size: 25px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-decoration: none;
 }
 
 /*Container where all links are bound*/
 
 nav .linkContainer {
-    display: flex;
-    font-size: 12px;
+  display: flex;
+  font-size: 12px;
 }
 
 /*Individual link manipulation */
 
 nav .linkContainer .navLinks {
-    cursor: pointer;
-    height: 100%;
-    padding: 0 20px;
-    transition: .4s;
-    color: #4A4A4A;
-    /* outline: dotted;
+  cursor: pointer;
+  height: 100%;
+  padding: 0 20px;
+  transition: 0.4s;
+  color: #4a4a4a;
+  /* outline: dotted;
     outline-color:red; */
 }
 
 nav .linkContainer .navLinks:hover {
-    background: #4A4A4A;
-    color: white;
+  background: #4a4a4a;
+  color: white;
 }
 
 .navbar-fixed-top.scrolled {
-    background-color: black !important;
-    /* transition: background-color 200ms linear; */
-  }
-
-
-
+  background-color: black !important;
+  /* transition: background-color 200ms linear; */
+}
 
 @media (max-width: 1000px) {
-    nav {
-        padding: 0 2rem; /* Past the width, the name binds to the left*/
-    }
+  nav {
+    padding: 0 2rem; /* Past the width, the name binds to the left*/
+  }
 
-    nav .linkContainer .navLinks {
-        padding: 0 20px; /*Might do nothing*/
-    }
+  nav .linkContainer .navLinks {
+    padding: 0 20px; /*Might do nothing*/
+  }
 }
 
 @media (max-width: 800px) {
-    nav .linkContainer {
-        display: grid;
-        position: absolute;
-        background: white;
-        width: 100%;
-        top: 60px;
-        left: 0px;
-        transform: translateY(-100%);
-        z-index: -1;
-        transition: .6s;
-    }
+  nav .linkContainer {
+    display: grid;
+    position: absolute;
+    background: white;
+    width: 100%;
+    top: 60px;
+    left: 0px;
+    transform: translateY(-100%);
+    z-index: -1;
+    transition: 0.6s;
+  }
 
-    nav .hamburgerMenu {
-        display: grid !important;
-    }
+  nav .hamburgerMenu {
+    display: grid !important;
+  }
 }
 
 /*Dissapears for when the window is large*/
 nav .hamburgerMenu {
-    display: none;
-    height: min-content;
-    margin: 3px -10px 0 0;
-    cursor: pointer;
+  display: none;
+  height: min-content;
+  margin: 3px -10px 0 0;
+  cursor: pointer;
 }
 
 nav .hamburgerMenu .hamburgerLine {
-    width: 30px;
-    height: 3px;
-    margin-bottom: 5px;
-    background: #4A4A4A;
-    border-radius: 30px;
-    transition: .4s;
+  width: 30px;
+  height: 3px;
+  margin-bottom: 5px;
+  background: #4a4a4a;
+  border-radius: 30px;
+  transition: 0.4s;
 }
 
 input {
-    display: none;
+  display: none;
 }
 
 input:checked ~ nav .linkContainer {
-    transform: translateY(0);
-
+  transform: translateY(0);
 }
 
 input:checked ~ nav .hamburgerMenu {
-    margin-top: 35;
+  margin-top: 35;
 }
 
 input:checked ~ nav .hamburgerMenu .hamburgerLine:nth-child(1) {
-    position: absolute;
-    transform: rotate(45deg);
+  position: absolute;
+  transform: rotate(45deg);
 }
 
 input:checked ~ nav .hamburgerMenu .hamburgerLine:nth-child(2) {
-    display: none;
+  display: none;
 }
 
 input:checked ~ nav .hamburgerMenu .hamburgerLine:nth-child(3) {
-    transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 /*Content*/
 
 .headerContent {
-    height: calc(100vh - 60px); /*Remaining height after .topbar */
-    position: absolute;
-    overflow-y: auto;
-    overflow-x: hidden;
-    perspective: 10px;
-    z-index: -2;
-    width: 100vw;
+  height: calc(100vh - 60px); /*Remaining height after .topbar */
+  position: absolute;
+  overflow-y: auto;
+  overflow-x: hidden;
+  perspective: 10px;
+  z-index: -2;
+  width: 100vw;
 }
 
 header {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: rgba(0, 0, 0, 0.1);
-    height:70%;
-    transform-style: preserve-3d;
-    z-index: -1;
-    /* outline: dotted; */
-  }
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.1);
+  height: 70%;
+  transform-style: preserve-3d;
+  z-index: -1;
+  /* outline: dotted; */
+}
 
 .headText {
- font-size:50px;
- font-weight: 900;
+  font-size: 50px;
+  font-weight: 900;
 }
 
 .descriptionText {
-    font-size:30px;
-
+  font-size: 30px;
 }
 
 .sky {
-    transform: translateZ(-30px) translateY(-100px) scale(5);
+  transform: translateZ(-30px) translateY(-100px) scale(5);
 }
 
 .background {
-    transform: translateZ(-10px) translateY(-10px) scale(2.1);
+  transform: translateZ(-10px) translateY(-10px) scale(2.1);
 }
 
 .foreground {
-    transform: translateZ(-5px) translateY(20px) scale(1.6);
+  transform: translateZ(-5px) translateY(20px) scale(1.6);
 }
 
 .sky,
 .background,
 .foreground {
-    position: absolute;
-    height:100%;
-    width:100%;
-    object-fit:cover; /*was cover */
-    z-index: -1;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover; /*was cover */
+  z-index: -1;
 }
 
 .contentContainer {
-    background-color: white;
-    height: 2000px;
-    width: 100%;
+  background-color: white;
+  height: 2000px;
+  width: 100%;
 }
 
 /*Greeting and Skills*/
 
-.greetAndSkillsSection{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.greetAndSkillsSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .greetAndSkills {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    padding: 10% 12%;
-    color: #4A4A4A;
-    /* outline: thin dotted red; */
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 10% 12%;
+  color: #4a4a4a;
+  /* outline: thin dotted red; */
 }
 
 .greetingSection {
-    width: 400px;
-    /* outline: thin dotted red; */
+  width: 400px;
+  /* outline: thin dotted red; */
 }
 
 h1 {
-    font-size: 48px;
-    font-weight: 1000;
+  font-size: 48px;
+  font-weight: 1000;
 }
 
 h2 {
-    font-size: 30px;
-    font-weight: 600;
+  font-size: 30px;
+  font-weight: 600;
 }
 
 p {
-    font-size:20.4px;
+  font-size: 20.4px;
 }
 
 .greetingLinkContainer {
-    display: flex;
+  display: flex;
 }
 
 .linkedinLink {
-    /* outline: thin dotted red; */
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
+  /* outline: thin dotted red; */
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
 }
 
 .linkedinLink img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
-
 .githubLink {
-    /* outline: thin dotted red; */
-    margin-left: 15px;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
+  /* outline: thin dotted red; */
+  margin-left: 15px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
 }
 
 .githubLink img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .dividerContainer {
-    padding: 10px 30px 10px 20px;
-    /* outline: thin dotted red; */
+  padding: 10px 30px 10px 20px;
+  /* outline: thin dotted red; */
 }
 .divider {
-    display: flex;
-    justify-content: center;  /*aligns horizontally*/
-    align-items: center;  /*aligns vertically*/
-    background-color: #4A4A4A;
-    height: 100%;
-    width: 1px;
+  display: flex;
+  justify-content: center; /*aligns horizontally*/
+  align-items: center; /*aligns vertically*/
+  background-color: #4a4a4a;
+  height: 100%;
+  width: 1px;
 }
 
 .topLanguagesSection {
-    /* outline: thin dotted red; */
+  /* outline: thin dotted red; */
 }
 
 .skillsGrid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    height: 190px;
-    width: 400px;
-    padding: 10px 0 0 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: 190px;
+  width: 400px;
+  padding: 10px 0 0 0;
 }
 
 .skill {
-    display: flex;
-    justify-content: center;
-    align-items: center; /* These two lines center the image within the grid item */
-    height: 70px;
-    width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* These two lines center the image within the grid item */
+  height: 70px;
+  width: 70px;
 }
 
 .skill img {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }
 
 /*About Me Section*/
 
 .aboutMeContainer {
-    padding: 5% 16%;
-    width: 100%;
-    color: white;
-    background-color: #236E4B;
-    position: relative;
-    overflow: hidden;
-    /* outline: thin dotted red; */
+  padding: 5% 16%;
+  width: 100%;
+  color: white;
+  background-color: #236e4b;
+  position: relative;
+  overflow: hidden;
+  /* outline: thin dotted red; */
 }
 
 .aboutMeBackground {
-    position: absolute;
-    height:100%;
-    width:100%;
-    transform: scale(2.2);
-    top: -60%;
-    bottom: 0;
-    left: 0;
-    right: 0;  /* these ensure the image fits the container */
-    filter: blur(2px);
-    object-fit:cover; /*was cover */
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  transform: scale(2.2);
+  top: -60%;
+  bottom: 0;
+  left: 0;
+  right: 0; /* these ensure the image fits the container */
+  filter: blur(2px);
+  object-fit: cover; /*was cover */
 }
 
 .AboutMeTitle {
- font-size: 35px;
- position: relative;
- z-index: 1;
+  font-size: 35px;
+  position: relative;
+  z-index: 1;
 }
 
 .AboutMeContent {
-    font-size: 20px;
-    position: relative;
-    z-index: 1;
+  font-size: 20px;
+  position: relative;
+  z-index: 1;
 }
 
 /*Project Section*/
 
 section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .projects {
-    /* height: 20px;
+  /* height: 20px;
     width: 60%; */
-    /* padding: 50% 32%; */
-    /* outline: thin dotted red; */
+  /* padding: 50% 32%; */
+  /* outline: thin dotted red; */
 }
 
 .projectContainer {
-    /* padding: 5% 52%; */
-    /* outline: thin dotted red; */
-    /* display:flex; */
+  /* padding: 5% 52%; */
+  /* outline: thin dotted red; */
+  /* display:flex; */
 }
 
 /* Footer Styling */
 
 footer {
-    background: #4A4A4A;
-    position: relative;
-    width:100%;
-    height: 100px;
+  background: #4a4a4a;
+  position: relative;
+  width: 100%;
+  height: 100px;
 }
 
 .getInTouch {
-    color: white;
-    position: absolute;
-    bottom: 0;
-    text-align:center;
-    /* padding: 40px 0 40px 0; */
+  color: white;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  /* padding: 40px 0 40px 0; */
 }
-
 
 /* .footer {
     position: fixed;
@@ -446,5 +439,3 @@ footer {
     background: black;
     color: white;
 } */
-
-
