@@ -8,6 +8,20 @@
   font-family: "Outfit";
 }
 
+a {
+  color: inherit; /* makes the link color the same as the text color */
+  text-decoration: none; /* removes underline */
+}
+
+a:visited {
+  color: inherit; /* makes the link color the same as the text color even after the link has been clicked */
+}
+
+a:hover {
+  color: inherit; /* makes the link color the same as the text color when hovered */
+  text-decoration: none;
+}
+
 /*Top bar container*/
 
 nav {
@@ -247,7 +261,7 @@ header {
 
 .contentContainer {
   background-color: white;
-  height: 2000px;
+  height: auto;
   width: 100%;
 }
 
@@ -309,6 +323,7 @@ p {
   width: 30px;
   height: 30px;
   cursor: pointer;
+  display: flex;
 }
 
 .githubLink img {
@@ -327,10 +342,6 @@ p {
   background-color: #4a4a4a;
   height: 100%;
   width: 1px;
-}
-
-.topLanguagesSection {
-  /* outline: thin dotted red; */
 }
 
 .skillsGrid {
@@ -363,6 +374,7 @@ p {
   background-color: #236e4b;
   position: relative;
   overflow: hidden;
+  margin-bottom: 30px;
   /* outline: thin dotted red; */
 }
 
@@ -393,30 +405,106 @@ p {
 
 /*Project Section*/
 
-section {
-  display: flex;
+.projects {
+  display: grid;
   justify-content: center;
   align-items: center;
 }
 
-.projects {
-  /* height: 20px;
-    width: 60%; */
-  /* padding: 50% 32%; */
-  /* outline: thin dotted red; */
+.projectContainer {
+  /* outline: thin dotted blue; */
+  width: 67vw;
+  height: 300px;
+  word-wrap: break-word;
+  margin-top: 50px;
+  display: flex;
+  gap: 30px;
 }
 
-.projectContainer {
-  /* padding: 5% 52%; */
+.projectOneImage {
+  width: 50%;
+  height: 100%;
   /* outline: thin dotted red; */
-  /* display:flex; */
+  /* padding: 0 10px 0 0; */
+  background-color: #236e4b;
+}
+
+.projectImageLeft {
+  width: 50%;
+  height: 100%;
+  /* outline: thin dotted red; */
+  /* padding: 0 10px 0 0; */
+  background-color: #236e4b;
+}
+
+.ProjectDescriptionRight {
+  order: 1;
+  width: 50%;
+  height: 100%;
+  /* padding: 0 0 0 10px; */
+  /* outline: thin dotted red; */
+  position: relative;
+}
+
+.projectImageRight {
+  order: 1;
+  width: 50%;
+  height: 100%;
+  /* outline: thin dotted red; */
+  /* padding: 0 0 0 10px; */
+  background-color: #6da0da;
+}
+
+.ProjectDescriptionLeft {
+  width: 50%;
+  height: 100%;
+  /* padding: 0 10px 0 0; */
+  /* outline: thin dotted red; */
+  position: relative;
+}
+
+.projectLinks {
+  width: 100%;
+  height: 35px;
+  /* outline: thin dotted blue; */
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  pointer-events: none;
+}
+
+.projectLink {
+  font-size: 30px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  /* outline: thin dotted red; */
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.linkBox {
+  height: 35px;
+  width: 35px;
+  /* outline: thin dotted red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.linkBox img {
+  width: 100%;
+  height: 100%;
 }
 
 /* Footer Styling */
 
 footer {
-  background: #4a4a4a;
+  background: #517fb5;
   position: relative;
+  margin-top: 80px;
   width: 100%;
   height: 100px;
 }
