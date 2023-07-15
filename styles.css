@@ -32,6 +32,7 @@ nav {
   height: 60px;
   line-height: 60px;
   background: white;
+  color: #4a4a4a;
 }
 
 nav .nameContainer {
@@ -53,17 +54,17 @@ nav .nameContainer .LightDarkModeBoxContainer {
 }
 
 nav .nameContainer .LightDarkModeBoxContainer:hover .boxTL {
-  top: 25%;
+  top: 25% !important;
   left: 0;
-  background-color: #f4b77e;
+  background-color: #f4b77e !important;
 }
 
 nav .nameContainer .LightDarkModeBoxContainer:hover .boxBR {
-  background-color: #084451;
+  background-color: #084451 !important;
 }
 
 nav .nameContainer .LightDarkModeBoxContainer:hover .boxTR {
-  background-color: #526197;
+  background-color: #526197 !important;
 }
 
 nav .nameContainer .LightDarkModeBoxContainer .boxTL {
@@ -98,7 +99,7 @@ nav .nameContainer .LightDarkModeBoxContainer .boxTR {
 
 /*My name in top bar*/
 nav .nameContainer .name {
-  color: #4a4a4a;
+  /* color: #4a4a4a; */
   font-size: 25px;
   font-weight: 500;
   letter-spacing: 2px;
@@ -119,7 +120,7 @@ nav .linkContainer .navLinks {
   height: 100%;
   padding: 0 20px;
   transition: 0.4s;
-  color: #4a4a4a;
+  /* color: #4a4a4a; */
   /* outline: dotted;
     outline-color:red; */
 }
@@ -214,6 +215,7 @@ input:checked ~ nav .hamburgerMenu .hamburgerLine:nth-child(3) {
   perspective: 10px;
   z-index: -2;
   width: 100vw;
+  background-color: white;
 }
 
 header {
@@ -238,15 +240,16 @@ header {
 }
 
 .sky {
-  transform: translateZ(-30px) translateY(-100px) scale(5);
+  transform: translateZ(-30px) translateY(-200px) scale(4.7);
 }
 
 .background {
-  transform: translateZ(-10px) translateY(-10px) scale(2.1);
+  transform: translateZ(-10px) translateX(-10px) scale(2);
+  width: 100%;
 }
 
 .foreground {
-  transform: translateZ(-5px) translateY(20px) scale(1.6);
+  transform: translateZ(-5px) scale(1.6);
 }
 
 .sky,
@@ -263,6 +266,7 @@ header {
   background-color: white;
   height: auto;
   width: 100%;
+  color: #4a4a4a;
 }
 
 /*Greeting and Skills*/
@@ -278,7 +282,7 @@ header {
   justify-content: center;
   width: 100%;
   padding: 10% 12%;
-  color: #4a4a4a;
+  /* color: #4a4a4a; */
   /* outline: thin dotted red; */
 }
 
@@ -339,7 +343,7 @@ p {
   display: flex;
   justify-content: center; /*aligns horizontally*/
   align-items: center; /*aligns vertically*/
-  background-color: #4a4a4a;
+  /* background-color: #4a4a4a; */
   height: 100%;
   width: 1px;
 }
@@ -409,6 +413,7 @@ p {
   display: grid;
   justify-content: center;
   align-items: center;
+  /* color: #4a4a4a; */
 }
 
 .projectContainer {
@@ -503,6 +508,7 @@ p {
 
 footer {
   background: #517fb5;
+  color: white;
   position: relative;
   margin-top: 80px;
   width: 100%;
@@ -513,7 +519,6 @@ footer {
 }
 
 .getInTouch {
-  color: white;
   position: absolute;
   /* bottom: 0; */
   /* text-align: center; */
