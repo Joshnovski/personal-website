@@ -507,13 +507,16 @@ footer {
   margin-top: 80px;
   width: 100%;
   height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .getInTouch {
   color: white;
   position: absolute;
-  bottom: 0;
-  text-align: center;
+  /* bottom: 0; */
+  /* text-align: center; */
   /* padding: 40px 0 40px 0; */
 }
 
