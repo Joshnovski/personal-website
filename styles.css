@@ -375,12 +375,27 @@ p {
   padding: 5% 16%;
   width: 100%;
   color: white;
-  background-color: #236e4b;
   position: relative;
   overflow: hidden;
   margin-bottom: 30px;
   /* outline: thin dotted red; */
 }
+
+:root {
+  --mask-color: rgba(0, 0, 0, 0.6);
+}
+
+.aboutMeContainer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--mask-color); /* Use the CSS variable here */
+  z-index: 1; /* This places the mask above the background image, but below the text */
+}
+
 
 .aboutMeBackground {
   position: absolute;
@@ -389,23 +404,26 @@ p {
   transform: scale(2.2);
   top: -60%;
   bottom: 0;
+  background-color: #005335;
+  filter: blur(3px);
   left: 0;
-  right: 0; /* these ensure the image fits the container */
-  filter: blur(2px);
-  object-fit: cover; /*was cover */
+  right: 0;
+  object-fit: cover;
+  z-index: 0; /* Ensures that the image stays below the mask */
 }
 
 .AboutMeTitle {
   font-size: 35px;
   position: relative;
-  z-index: 1;
+  z-index: 2; /* Ensures that the text stays above the mask */
 }
 
 .AboutMeContent {
   font-size: 20px;
   position: relative;
-  z-index: 1;
+  z-index: 2; /* Ensures that the text stays above the mask */
 }
+
 
 /*Project Section*/
 
@@ -424,14 +442,6 @@ p {
   margin-top: 50px;
   display: flex;
   gap: 30px;
-}
-
-.projectOneImage {
-  width: 50%;
-  height: 100%;
-  /* outline: thin dotted red; */
-  /* padding: 0 10px 0 0; */
-  background-color: #236e4b;
 }
 
 .projectImageLeft {
