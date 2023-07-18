@@ -16,20 +16,23 @@ for (var i = 0; i < lightModeElements.length; i++) {
     var boxTR = document.getElementsByClassName("boxTR");
     var boxBR = document.getElementsByClassName("boxBR");
 
-    var aboutMeImg = document.querySelector('.aboutMeBackground');
-    var foregroundImg = document.querySelector('.foreground');
-    var backgroundImg = document.querySelector('.background');
-    var skyImg = document.querySelector('.sky');
+    var aboutMeImg = document.querySelector(".aboutMeBackground");
+    var foregroundImg = document.querySelector(".foreground");
+    var backgroundImg = document.querySelector(".background");
+    var skyImg = document.querySelector(".sky");
+
+    var linkedinLinkImg = document.querySelector(".linkedinLink img");
+    var githubLinkImg = document.querySelector(".githubLink img");
+    var linkBoxImg = document.getElementsByClassName("linkBox");
 
     var projectImgLeft = document.getElementsByClassName("projectImageLeft");
     var projectImgRight = document.getElementsByClassName("projectImageRight");
 
     //Check state of Light/Dark mode
     if (isLight) {
-
       for (var j = 0; j < contentContainer.length; j++) {
         contentContainer[j].style.backgroundColor = "white";
-        contentContainer[j].style.color = "#282730";
+        contentContainer[j].style.color = "#4a4a4a";
       }
 
       for (var j = 0; j < headerContent.length; j++) {
@@ -42,7 +45,7 @@ for (var i = 0; i < lightModeElements.length; i++) {
 
       for (var j = 0; j < nav.length; j++) {
         nav[j].style.backgroundColor = "white";
-        nav[j].style.color = "#282730";
+        nav[j].style.color = "#4a4a4a";
       }
 
       for (var j = 0; j < boxTL.length; j++) {
@@ -58,13 +61,33 @@ for (var i = 0; i < lightModeElements.length; i++) {
         boxBR[j].style.backgroundColor = "#003C30";
       }
 
-      foregroundImg.src = 'assets/DayForest.png';
-      aboutMeImg.src = 'assets/DayForest.png';
-      aboutMeImg.style.backgroundColor = '#005335';
-      backgroundImg.src = 'assets/DayMountain.png';
-      skyImg.src = 'assets/DaySky.png';
+      foregroundImg.src = "assets/DayForest.png";
+      aboutMeImg.src = "assets/DayForest.png";
 
-      document.documentElement.style.setProperty('--mask-color', 'rgba(0, 0, 0, 0.4)');
+      aboutMeImg.style.backgroundColor = "#005335";
+
+      backgroundImg.src = "assets/DayMountain.png";
+      skyImg.src = "assets/DaySky.png";
+
+      linkedinLinkImg.src = "assets/linkedIn.png";
+      githubLinkImg.src = "assets/github.png";
+
+      // Evens
+      for (var j = 0; j < linkBoxImg.length; j += 2) {
+        var demoImg = linkBoxImg[j].querySelector("img");
+        demoImg.src = "assets/demoLink.png";
+      }
+
+      // Odds
+      for (var j = 1; j < linkBoxImg.length; j += 2) {
+        var gitImg = linkBoxImg[j].querySelector("img");
+        gitImg.src = "assets/github.png";
+      }
+
+      document.documentElement.style.setProperty(
+        "--mask-color",
+        "rgba(0, 0, 0, 0.4)"
+      );
 
       for (var j = 0; j < projectImgLeft.length; j++) {
         projectImgLeft[j].style.backgroundColor = "#236e4b";
@@ -76,9 +99,7 @@ for (var i = 0; i < lightModeElements.length; i++) {
 
       // prepare state for switch back to light mode on next click
       isLight = false;
-
     } else {
-
       for (var j = 0; j < contentContainer.length; j++) {
         contentContainer[j].style.backgroundColor = "#282730";
         contentContainer[j].style.color = "white";
@@ -99,7 +120,7 @@ for (var i = 0; i < lightModeElements.length; i++) {
 
       for (var j = 0; j < boxTL.length; j++) {
         boxTL[j].style.top = "50%";
-        boxTL[j].style.backgroundColor = "#694DA3";       
+        boxTL[j].style.backgroundColor = "#694DA3";
       }
 
       for (var j = 0; j < boxTR.length; j++) {
@@ -111,16 +132,34 @@ for (var i = 0; i < lightModeElements.length; i++) {
       }
 
       for (var j = 0; j < foregroundImg.length; j++) {
-        foregroundImg[j].src = 'assets/NightForest.png';
-    }
+        foregroundImg[j].src = "assets/NightForest.png";
+      }
 
-      foregroundImg.src = 'assets/NightForest.png';
-      aboutMeImg.src = 'assets/NightForest.png';
-      aboutMeImg.style.backgroundColor = '#1F2C33';
-      backgroundImg.src = 'assets/NightMountain.png';
-      skyImg.src = 'assets/NightSky.png';
+      foregroundImg.src = "assets/NightForest.png";
+      aboutMeImg.src = "assets/NightForest.png";
+      aboutMeImg.style.backgroundColor = "#1F2C33";
+      backgroundImg.src = "assets/NightMountain.png";
+      skyImg.src = "assets/NightSky.png";
 
-      document.documentElement.style.setProperty('--mask-color', 'rgba(0, 0, 0, 0)');
+      linkedinLinkImg.src = "assets/NightLinkedIn.png";
+      githubLinkImg.src = "assets/NightGitHub.png";
+
+      // Evens
+      for (var j = 0; j < linkBoxImg.length; j += 2) {
+        var demoImg = linkBoxImg[j].querySelector("img");
+        demoImg.src = "assets/NightDemoLink.png";
+      }
+
+      // Odds
+      for (var j = 1; j < linkBoxImg.length; j += 2) {
+        var gitImg = linkBoxImg[j].querySelector("img");
+        gitImg.src = "assets/NightGitHub.png";
+      }
+
+      document.documentElement.style.setProperty(
+        "--mask-color",
+        "rgba(0, 0, 0, 0)"
+      );
 
       for (var j = 0; j < projectImgLeft.length; j++) {
         projectImgLeft[j].style.backgroundColor = "#2C4344";
@@ -132,7 +171,6 @@ for (var i = 0; i < lightModeElements.length; i++) {
 
       // prepare state for switch back to light mode on next click
       isLight = true;
-
     }
   });
 }
