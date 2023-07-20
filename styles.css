@@ -111,6 +111,7 @@ nav .nameContainer .name {
 nav .linkContainer {
   display: flex;
   font-size: 12px;
+  margin-right: 50px;
 }
 
 /*Individual link manipulation */
@@ -396,7 +397,6 @@ p {
   z-index: 1; /* This places the mask above the background image, but below the text */
 }
 
-
 .aboutMeBackground {
   position: absolute;
   height: 100%;
@@ -423,7 +423,6 @@ p {
   position: relative;
   z-index: 2; /* Ensures that the text stays above the mask */
 }
-
 
 /*Project Section*/
 
@@ -486,12 +485,12 @@ p {
   bottom: 0;
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 30px;
   pointer-events: none;
 }
 
 .projectLink {
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 600;
   display: flex;
   align-items: center;
@@ -502,8 +501,8 @@ p {
 }
 
 .linkBox {
-  height: 35px;
-  width: 35px;
+  height: 30px;
+  width: 30px;
   /* outline: thin dotted red; */
   display: flex;
   align-items: center;
@@ -534,14 +533,3 @@ footer {
   /* text-align: center; */
   /* padding: 40px 0 40px 0; */
 }
-
-/* .footer {
-    position: fixed;
-    width:100%;
-    bottom: 0px;
-
-    padding: 40px;
-    text-align:center;
-    background: black;
-    color: white;
-} */
